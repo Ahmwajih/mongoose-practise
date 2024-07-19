@@ -10,13 +10,16 @@ require('./dbConnection');
 
 
 const {User} = require('./models/user.model')
-User.create({
-        userName: 'JohnDoe',
-        fName: 'John',
-        lName: 'Doe',
-        Age: 25
-    })
+// User.create({
+//         userName: 'JohnDoe',
+//         fName: 'John',
+//         lName: 'Doe',
+//         Age: 25
+//     })
 
+
+    app.use(express.json());
+    app.use('/users', require('./routes/user.router'));
 
 
 
